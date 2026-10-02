@@ -40,7 +40,7 @@
 
 ## ビルド
 
-Java 21 と Gradle 9.2 以上で `gradle build`。jar は `build/libs/` にできます。`v*` のタグを push すると GitHub Actions が Release を作ります。
+Java 21 と Gradle 9.2 以上で `gradle build`。jar は `build/libs/` にできます。GitHub Actions の build ワークフローを release_tag 付きで手動実行するか、`v*` のタグを push すると Release ができます。
 
 ## 注意
 
