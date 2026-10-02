@@ -42,8 +42,13 @@
 
 Java 21 と Gradle 9.2 以上で `gradle build`。jar は `build/libs/` にできます。GitHub Actions の build ワークフローを release_tag 付きで手動実行するか、`v*` のタグを push すると Release ができます。
 
+## 動作確認
+
+Minecraft 1.21.11 + Fabric Loader 0.19.5 + Fabric API 0.141.6 で確認済みです。MOD オフでは投げたポーションがネザーへ移るだけですが、オンではゲートに入った tick にちょうど床へ当たるものが「こちらで割れる＋向こうにコピー」になり、1.21.1 と同じタイミング条件で複製されます。
+
 ## 注意
 
+- 1.21.2 以降のサーバーは、誰もログインしていないと 60 秒で tick が止まります（`server.properties` の `pause-when-empty-seconds`）。無人で装置を動かしたいときは `-1` にしてください。
 - サーバー側だけで動きます。シングルプレイでも使えます（クライアントの `mods/` に入れる）。
 - バニラの仕様を意図的に戻す MOD です。導入するサーバーのルールに従ってください。
 - Mojang / Microsoft とは無関係の非公式 MOD です。
